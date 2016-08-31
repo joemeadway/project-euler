@@ -1,27 +1,24 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjectEuler;
+using Xunit;
 
-namespace ProjectEulerTest
+namespace ProjectEuler.Test
 {
-    [TestClass]
     public class Problem6Test
     {
-        [TestMethod]
+        [Fact]
         public void SumOfSquares_MatchesGivenExample()
         {
             var six = new Problem6();
             var output = six.SumOfSquares(1, 10);
-            Assert.AreEqual(385, output);
+            Assert.Equal(385, output);
         }
-
-        [TestMethod]
+        
+        [Fact]
         public void SquareOfSum_MatchesGivenExample()
         {
             var six = new Problem6();
             var output = six.SquareOfSum(1, 10);
-            Assert.AreEqual(3025, output);
-
+            Assert.Equal(3025, output);
         }
+       
     }
 }

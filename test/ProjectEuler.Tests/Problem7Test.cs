@@ -1,26 +1,24 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjectEuler;
+using Xunit;
 
-namespace ProjectEulerTest
+namespace ProjectEuler.Test
 {
 
-    [TestClass]
     public class Problem7Test
     {
-        [TestMethod]
+        [Fact]
         public void PrimeFinder_LookingForSixth_ReturnsThirteen()
         {
             var seven = new Problem7();
             var output = seven.PrimeFinder(6);
-            Assert.AreEqual(13, output);
+            Assert.Equal(13, output);
         }
 
-        [TestMethod]
+        [Fact]
         public void PrimeFinder_LookingForFirst_ReturnsTwo()
         {
             var seven = new Problem7();
             var output = seven.PrimeFinder(1);
-            Assert.AreEqual(2, output);
+            Assert.Equal(2, output);
         }
     }
 }
